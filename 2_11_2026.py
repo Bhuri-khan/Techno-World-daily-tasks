@@ -46,6 +46,7 @@ def func():
             break                 
 func()        
 while True:
+    
     choice = input("Do you want play again: (yes/no)")
         
     if choice == "yes":
