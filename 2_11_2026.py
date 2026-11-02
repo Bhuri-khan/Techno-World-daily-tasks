@@ -36,7 +36,7 @@ def func():
         if number == secret_number:
             print(f"thankyou your number is carrect: {secret_number},attempt{attempt}")
             break
-    
+
         elif number > secret_number:
             print(f"too high please enter the number:{count}")
         elif number < secret_number:
@@ -46,6 +46,7 @@ def func():
             break                 
 func()        
 while True:
+    
     choice = input("Do you want play again: (yes/no)")
         
     if choice == "yes":
