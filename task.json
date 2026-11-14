@@ -1,0 +1,23 @@
+[
+    {
+        "name": "danish",
+        "subject": "maths",
+        "total_marks": 100,
+        "obatained": 100,
+        "percentage": 100.0
+    },
+    {
+        "name": "bhuri",
+        "subject": "hindi",
+        "total_marks": 90,
+        "obatained": 100,
+        "percentage": 111.11111111111111
+    },
+    {
+        "name": "bhuri",
+        "subject": "hindi",
+        "total_marks": 90,
+        "obatained": 100,
+        "percentage": 111.11111111111111
+    }
+]

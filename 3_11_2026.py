@@ -61,11 +61,17 @@ def add_new_contect():
         json.dump(data,file,indent=4)
     print("data save succesfully")
      
+     
+     
+     
 def view_contect():
         with open("data.json","r") as file:
             data=file.read()
+        
             print(data)
         print("thankyou")
+
+
 
 def search():
     with open("data.json","r")as file:
@@ -85,56 +91,53 @@ def search():
     else:
         print("please enter the add data student:")     
   
+  
+  
 def update():
-    with open("data.json","r+") as file:
+    
+    with open("data.json",'r') as file:
         data=json.load(file)
-    
-    while True:
-            
-        print("1.update_name")
-        print("2.update_email")
-        print("3.update_number")
-        print("4.exit")
-        choice=int(input("please enter the choice : "))
-        if choice==1:
-            name1=input("enter corrent name : ")
-            name2=input("enter new name : ")
-                
-            for i in data:
-                if i["name"]==name1:
-                    i["name"]=name2
-                with open("data.json","w") as file:
-                    json.dump(data,file,indent=4)
-
-                print("save name successfully")
-                    
-            
-        if choice==2:
-            email1=input("enter corrent name : ")
-            email2=input("enter new name : ")
-                
-            for i in data:
-                if i["email"]==email1:
-                    i["email"]=email2
-            with open("data.json","w") as file:
-                json.dump(data,file,indent=4)
         
-            print("email update successfully")    
-            
-        if choice==3:
-            number1=input("enter corrent name : ")
-            number2=input("enter new name : ")
-                       
+    while True:
+        print("1. Name Update") 
+        print("2. Email Update")
+        print("3. Number Update")
+        print("4. Exit")   
+        choice=input("Enter Your Choice: ")
+        if choice=="1":
+            old_name=input("Enter Old Name: ")
             for i in data:
-                if i["number"]==number1:
-                    i["number"]=number2
-            with open("data.json","w") as file:
-                json.dump(data,file,indent=4)
-               
-            print("number update successfully")        
-        else:
-            print("data not match and data is not found:")
-    
+                if i["name"]==old_name:
+                    new_name=input("Enter Your New Name: ")
+                    i["name"]=new_name
+                    with open("data.json",'w') as new_name_:
+                        json.dump(data,new_name_,indent=4)
+                    print("Name Update Successful")
+                    break
+                        
+        elif choice=="2":
+            old_email=input("Enter Old Name: ")
+            for i in data:
+                if i["email"]==old_email:
+                    new_email=input("Enter Your New Email: ")
+                    i["email"]=new_email
+                    with open("data.json",'w') as new_email_:
+                        json.dump(data,new_email_,indent=4)
+                    print("Email Update Successful")
+                    break
+        elif choice=="3":
+            old_mobile=input("Enter Old Mobile Number: ")
+            for i in data:
+                if i["number"]==old_mobile:
+                    new_mobile=input("Enter New Mobile Number: ")
+                    i["number"]=new_mobile
+                    with open("data.json",'w') as file:
+                        json.dump(data,file,indent=4)
+                    print("Mobile Number Update Successful")
+                    break
+        elif choice=="4":
+            print("Exit Successful")
+            break
 def delete():
     
     with open("data.json", "r") as file:
@@ -142,17 +145,19 @@ def delete():
 
         name = input("Please enter the name to delete: ")
 
-    for i in data:
-        if i["name"].lower() == name.lower():
-            data.remove(i)
+        for i in data:
+            if i["name"].lower() == name.lower():
+                data.remove(i)
 
-    with open("data.json", "w") as file:
-        json.dump(data, file, indent=4)
+            with open("data.json", "w") as file:
+                json.dump(data, file, indent=4)
 
-        print("Contact deleted successfully!")
-        return
+                print("Contact deleted successfully!")
+                return
+        else:
+            print("data is not found ")
 
-    print("Data is not found") 
+        
     
   
   
@@ -165,7 +170,9 @@ def menu():
         print("5.delete contact")
         print("6.exit")  
         
+        
         choice = int(input("please enter the choice:  "))
+        
         if choice ==1:
             add_new_contect()
         elif choice==2:
