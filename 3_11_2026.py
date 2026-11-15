@@ -97,7 +97,6 @@ def update():
     
     with open("data.json",'r') as file:
         data=json.load(file)
-        
     while True:
         print("1. Name Update") 
         print("2. Email Update")

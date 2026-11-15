@@ -199,8 +199,7 @@ def menu():
             else:
     
                 print("Invalid Choice!")
-    
-    
+
 menu()   
         
     

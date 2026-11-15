@@ -38,13 +38,11 @@ def add_new_contect():
         if choice.lower() != "yes":
             break
 
-
         print("\n========== ALL STUDENTS DATA ==========")
         print("\nStudent Name   :", name)
         print("Subjects         :", subject_name)
         print("Total Marks      :",  total)
         print("Obtained Marks   :", obtained_marks)
         print("Percentage       :", percentage)      
-                
             
 add_new_contect()            

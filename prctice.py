@@ -37,7 +37,6 @@ while True:
 
     student["percentage"] = (total_marks /obtained_marks ) * 100
     
-    
 
     students.append(student)
 

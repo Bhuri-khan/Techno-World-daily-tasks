@@ -22,8 +22,6 @@
 import random
 secret_number=random.randint(1,100)
 
-
-
 def func():
     attempt=0
     count=0 
